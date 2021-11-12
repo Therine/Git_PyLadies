@@ -14,6 +14,7 @@ while active != False:
         print (len(modulo_set))
         if len(modulo_set) == factor_count:
             active = False
+        modulo_set = []
 
 
 print ('factor count:', factor_count)
