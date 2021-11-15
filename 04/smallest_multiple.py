@@ -13,9 +13,10 @@ for j in range(1000):
       smallest_multiple = j
       modulo = smallest_multiple % i # smallest multiple iterates by one whole number each loop. 
       modulo_set.append(modulo) # this is how you collect the 0 to evaluate whether all of the iterations divide evenly.
-    
+      print(modulo_set)
+     
       #smallest_multiple = smallest_multiple + 1
-      modulo_set = []
+     
   
 
 print (sum(modulo_set))
