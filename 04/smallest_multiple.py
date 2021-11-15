@@ -4,16 +4,20 @@ modulo_set = [] # this is the evaluation set where i divides into each smallest_
 zero_set = [] # when the sum of the modulo_set equals zero, append it to this set
 
 #factor_count = 10 # the number of factors that should be divisible
-smallest_multiple = 2520
-for i in range (1,10):
-  modulo = smallest_multiple % i
-  modulo_set.append(modulo)
-  print (i)
-  print(modulo_set)
-  print (sum(modulo_set)) #each of these zeros represents an iteration from 1-2520 % i until the set equals zero
+smallest_multiple = 2
+for j in range (smallest_multiple + 1):
+  for i in range (1,10):
+    modulo = j % i
+    modulo_set.append(modulo)
+    print (i)
+    print(modulo_set)
+    print (sum(modulo_set)) #each of these zeros represents an iteration from 1-2520 % i until the set equals zero
+    if sum(modulo_set) == 0:
+      zero_set.append(sum(modulo_set))
 
+    smallest_multiple = smallest_multiple + 1
     
-
-
+print (zero_set)
+print (smallest_multiple)
 #print (sum(modulo_set))
 #print(modulo_set)
