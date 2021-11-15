@@ -10,3 +10,4 @@ for i in range (1,factor_count): # I want to put this inside of another for loop
       #smallest_multiple = smallest_multiple + 1
 
 print (sum(modulo_set))
+print(modulo_set)
