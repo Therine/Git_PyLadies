@@ -17,45 +17,12 @@ modulo_set = [] # the smallest number that is divisible by each number up to and
   #   print(modulo_set)
      
       #smallest_multiple = smallest_multiple + 1
-modulo = 1 % 1
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
-modulo = 1 % 2
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))   
-modulo = 1 % 3
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
-modulo = 1 % 4
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
-modulo = 1 % 5
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
-modulo = 1 % 6
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
-modulo = 1 % 7
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
-modulo = 1 % 8
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set)) 
-modulo = 1 % 9
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
-modulo = 1 % 10
-modulo_set.append(modulo)
-print(modulo_set)
-print (sum(modulo_set))
+for i in range (1,100):
+  modulo = 1 % i
+  modulo_set.append(modulo)
+  print (i)
+  print(modulo_set)
+  print (sum(modulo_set))
+
 #print (sum(modulo_set))
 #print(modulo_set)
