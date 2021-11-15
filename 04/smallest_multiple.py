@@ -16,5 +16,7 @@ for j in range(1000):
     
       #smallest_multiple = smallest_multiple + 1
 
+  modulo_set = []
+
 print (sum(modulo_set))
 print(modulo_set)
