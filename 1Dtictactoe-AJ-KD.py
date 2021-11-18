@@ -1,20 +1,24 @@
 from random import randrange
-player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, let's just call it tic, because we are only playing in one dimension. Anyway, would you like to be an X or O? ")
-if player_mark = "X" or "x":
-  pc_mark = "O"
-else: 
-  pc_mark = "X"
+player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an X or O? ")
+if player_mark == "X" or "x":
+  pc_mark = "o"
+  player_mark = "x"
+elif player_mark == "0" or "o" or "O":
+  pc_mark = "x"
+  player_mark = "o"
+print("Perfect, you can be ", player_mark, " and the computer will be ", pc_mark)
+
+
 #Step 1
 #Write a function evaluate that gets the string with the board of 1D tic-tac-toe, and returns one character based on the state of the game:
-board = -*20
-def evaluate(board)
-    if board == "%xxx%"
+def evaluate(board):
+    if board == "%xxx%":
         return "X"
-    elif board == "%ooo%"
+    elif board == "%ooo%":
         return "O"
-    elif board != "-"
+    elif board != "-":
         return "!"
-    else
+    else:
         return "-"  
 
 
@@ -25,25 +29,36 @@ def evaluate(board)
 
 def move(board, mark, position):
     # Returns the game board with the given mark in the given position.
+    board = '-'*20 #this should be an official list like board = ['- '*20]?
+    print ("Let's take a look at the board, shall we?")
     print(board)
+    print("Right, that line of dashes is our board. As you play, the board should update \n with your marker and then the computer's marker until one of you get 3 in a row.")
+    goes_first = input("So, which one of you should go first, you or the computer. Type in 'me' or 'pc': ")
+    if goes_first == "me":
+        player_move(position = int(input("Where you would like to place your piece (0-19)? ")))
+
 #Step 3
 #Write a player_move function that gets a string with the game board, asks the player which position he wants to play, and returns the updated game board with the player's move. The function should reject negative or too large numbers or moves to an occupied position. If the user has entered a wrong argument, the function should ask again (to get correct answer).
-def player_move(position)
+#this function needs work. 
+def player_move(position):
   position = int(input("Where you would like to place your piece (0-19)? "))
   chosen_position = position[position]
   if chosen_position == '-':
     # somehow replace this dash with the player_marker. I think that this is going to involve a for loop
-    for i in range (19)
-      if position[i] == '-'
+    for i in range (19):
+      if position[i] == '-':
         break
-      elif position[]
+      else:
+        position[player_mark]
+
   else:
     print("Sorry, my friend, that position is already taken!")
+  print(board)
 
 #Step 4
-#Write a pc_move function that gets the string with the game board. It will select a position to play, and returns the game board with the computer's move.
+#Write a pc_move function that gets the =string with the game board. It will select a position to play, and returns the game board with the computer's move.
 #Use a simple random "strategy":
-def pc_move(position)
+def pc_move(position):
   position = randrange(19)
 
 #Select a random number from 0 to 19.
