@@ -12,8 +12,8 @@ for j in range (20):
     print ('iteration',i)
     print(modulo_set)
     print (sum(modulo_set)) #each of these zeros represents an iteration from 1-2520 % i until the set equals zero
-  if sum(modulo_set) == 0:
-    zero_set.append(sum(modulo_set))
+    if sum(modulo_set) == 0:
+      zero_set.append(sum(modulo_set))
   modulo_set = []
   smallest_multiple = smallest_multiple + 1
 
@@ -21,6 +21,7 @@ for j in range (20):
 
 
 print (zero_set)
+print (len(zero_set))
 print (smallest_multiple)
 #print (sum(modulo_set))
 #print(modulo_set)
