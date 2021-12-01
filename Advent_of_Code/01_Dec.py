@@ -12,6 +12,7 @@ with open ("input.txt") as f:
 #difference = int(lines[1]) - int(lines[0])
 #print(difference)
 #A really bizarre way to figure this out is to make one more list from these files and just compare each index against each other. 
+
 deeper = 0
 #First, I need to iterate over each measurement in order to calculate the difference
 for i in range(1, len(lines)):
