@@ -1,6 +1,6 @@
 from random import randrange
 
-def assign_mark(playermark)
+def assign_mark(player_mark)
   player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an X or O? ")
   if player_mark == "X" or "x":
     pc_mark = "o"
