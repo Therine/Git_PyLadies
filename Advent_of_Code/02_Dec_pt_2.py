@@ -19,12 +19,12 @@ aim = 0
 for i in range(0, len(lines)):
     if lines[i] == 'forward':
         horizontal = horizontal + int(lines[i+1])
-        depth = depth + int(lines[i+1]) * aim
+        depth = depth + (int(lines[i+1]) * aim)
     if lines[i] == 'up':
-        depth = depth - int(lines[i+1])
+        #depth = depth - int(lines[i+1])
         aim = aim - int(lines[i+1])
     if lines[i] == 'down':
-        depth = depth + int(lines[i+1])
+        #depth = depth + int(lines[i+1])
         aim = aim + int(lines[i+1])
 #    else:
 #        break
