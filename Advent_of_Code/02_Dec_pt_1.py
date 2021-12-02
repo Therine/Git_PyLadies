@@ -13,19 +13,20 @@ print(lines)
 #
 #horizontal = sum(lines)
 #ran into the str versus int issue
-#horizontal = 0
-#depth = 0
-#for i in lines:
-#    if lines[i] == 'forward':
-#        horizontal = horizontal + int(lines[i+1])
-#    if lines[i] == 'up':
-#        depth = depth - int(lines[i+1])
-#    if lines[i] == 'down':
-#        depth = depth + int(lines[i+1])
+horizontal = 0
+depth = 0
+for i in range(0, len(lines)):
+    if lines[i] == 'forward':
+        horizontal = horizontal + int(lines[i+1])
+    if lines[i] == 'up':
+        depth = depth - int(lines[i+1])
+    if lines[i] == 'down':
+        depth = depth + int(lines[i+1])
 #    else:
 #        break
 #This loop is looking for forward elements to extract the number and add them all together
 #for step in lines:
 #    if step 
-#print(horizontal)
-#print(depth)
+print(horizontal)
+print(depth)
+print(horizontal*depth)
