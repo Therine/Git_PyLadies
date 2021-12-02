@@ -3,8 +3,8 @@ from turtle import forward, up, down, exitonclick
 with open ("input_02_dec.txt") as f:
     #lines = f.read().splitlines()
     lines = f.read().split()
-
-print(lines)
+    
+#print(lines)
 
 #Calculate the horizontal position and depth you would have after following the planned course. 
 #What do you get if you multiply your final horizontal position by your final depth?
@@ -14,7 +14,8 @@ print(lines)
 #ran into the str versus int issue
 horizontal = 0
 depth = 0
-
+if lines[0] == 'forward':
+    horizontal = horizontal + int(lines[0+1])
 #This loop is looking for forward elements to extract the number and add them all together
 #for step in lines:
 #    if step 
