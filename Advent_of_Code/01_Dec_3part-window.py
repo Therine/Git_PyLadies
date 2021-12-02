@@ -1,4 +1,5 @@
-#How many measurements are larger than the previous measurement?
+#Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
+#https://adventofcode.com/2021/day/1
 #Code from Tyna to use the data in the file that I downloaded from Advent of Code
 with open ("input.txt") as f:
     lines = f.read().splitlines()
@@ -13,16 +14,20 @@ with open ("input.txt") as f:
 #print(difference)
 #A really bizarre way to figure this out is to make one more list from these files and just compare each index against each other. 
 
-deeper = []
-
+window_set = []
+window_difference =[]
 #First, I need to iterate over each measurement in order to calculate the difference
-for i in range(1, len(lines)):
-    difference = lines[i] - lines[i-1]
-    if difference > 0:
-        deeper.append(difference)
-            
-measurement = len(deeper)       
-print (len(lines))
+for i in range(2, len(lines)):
+    window = lines[i] + lines[i-1] + lines[i-2]
+    window_set.append(window)
+
+for i in range(1,len(window_set)):
+    set_difference = window_set[i] - window_set[i-1]
+    if set_difference > 0:
+        window_difference.append(set_difference)
+print(window_set)
+measurement = len(window_difference)       
+print (len(window_set))
         
 print ("There are ", measurement, "measurements that are greater than the previous measurement")
 #idea found here: https://stackoverflow.com/questions/2400840/python-finding-differences-between-elements-of-a-list
