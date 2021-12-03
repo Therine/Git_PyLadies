@@ -5,19 +5,23 @@ with open ("input_03_dec.txt") as f:
 #change the strings into integers
 #for i in range(0, len(lines)):
 #    lines[i] = int(lines[i])
+#change the strings into integers
+#for i in range(0, len(lines)):
+#    lines[i] = int(lines[i])
 #print(lines)
 #print(len(lines))
 #print(len(lines[0]))
 
 gamma_list = []
 epsilon_list = []
-
+gamma_rate = sum(gamma_list)
+epsilon_rate = sum(epsilon_list)
 #power_consumption = gamma_rate * epsilon_rate
 #Each bit in the gamma rate can be determined by finding 
 #the most common bit in the corresponding position of all 
 #numbers in the diagnostic report.
-gamma_bit = lines[0]
-print(gamma_bit)
+    gamma_bit = lines[0][0]
+    print(gamma_bit)
 #The epsilon rate is calculated in a similar way; rather than use the most common bit, 
 #the least common bit from each position is used. 
 #len(lines) = 1000
