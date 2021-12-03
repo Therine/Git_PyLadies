@@ -11,6 +11,8 @@ with open ("input_03_dec.txt") as f:
 #print(lines)
 #print(len(lines))
 #print(len(lines[0]))
+gamma_position = []
+
 
 gamma_list = []
 epsilon_list = []
@@ -20,15 +22,27 @@ epsilon_rate = sum(epsilon_list)
 #Each bit in the gamma rate can be determined by finding 
 #the most common bit in the corresponding position of all 
 #numbers in the diagnostic report.
-    gamma_bit = lines[0][0]
-    print(gamma_bit)
-#The epsilon rate is calculated in a similar way; rather than use the most common bit, 
-#the least common bit from each position is used. 
-#len(lines) = 1000
-#len(lines[0]) = 12
-#
-#for i in range(0,11):
-#    if sum(lines[i]) > 500:
-#        bit_of_gamma = 1
-#        gamma_rate.append(bit_of_gamma)
-#translate the binary of gamma_rate into decimal
+for j in range(0,12):
+    for i in range(len(lines)):
+        
+        gamma_bit = lines[i][j]
+        gamma_position.append(gamma_bit)
+        print(gamma_bit)
+    #The epsilon rate is calculated in a similar way; rather than use the most common bit, 
+    #the least common bit from each position is used. 
+    #len(lines) = 1000
+    #len(lines[0]) = 12
+    ##change the strings into integers
+    for i in range(0, len(gamma_position)):
+        gamma_position[i] = int(gamma_position[i])
+    #translate the binary of gamma_rate into decimal
+    #print(gamma_position)
+    print(sum(gamma_position))
+    if sum(gamma_position) > 500:
+        gamma_list.append(1)
+    if sum(gamma_position)<=500:
+        gamma_list.append(0)
+    gamma_position = []
+
+
+print(gamma_list)
