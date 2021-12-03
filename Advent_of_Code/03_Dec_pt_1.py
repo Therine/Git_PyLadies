@@ -16,7 +16,7 @@ gamma_position = []
 
 gamma_list = []
 epsilon_list = []
-gamma_rate = sum(gamma_list)
+gamma_rate = gamma_list
 epsilon_rate = sum(epsilon_list)
 #power_consumption = gamma_rate * epsilon_rate
 #Each bit in the gamma rate can be determined by finding 
@@ -46,3 +46,5 @@ for j in range(0,12):
 
 
 print(gamma_list)
+gamma_rate = int(''.join(map(str,gamma_list)))
+print(gamma_rate)
