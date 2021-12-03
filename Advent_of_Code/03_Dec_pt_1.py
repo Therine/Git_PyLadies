@@ -46,5 +46,13 @@ for j in range(0,12):
 
 
 print(gamma_list)
-gamma_rate = int(''.join(map(str,gamma_list)))
+gamma_rate = ''.join(map(str,gamma_list))
 print(gamma_rate)
+binary_string = gamma_rate
+
+try:
+    gamma_rate_decimal = int(binary_string,2)  
+    print("The decimal value is :", gamma_rate_decimal)    
+    
+except ValueError:
+    print("Invalid binary number")
