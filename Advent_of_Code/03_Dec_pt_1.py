@@ -16,9 +16,8 @@ epsilon_list = []
 #Each bit in the gamma rate can be determined by finding 
 #the most common bit in the corresponding position of all 
 #numbers in the diagnostic report.
-for i in range(0,len(lines[0])):
-    gamma_bit = sum(lines[i])
-    print(gamma_bit)
+gamma_bit = lines[0]
+print(gamma_bit)
 #The epsilon rate is calculated in a similar way; rather than use the most common bit, 
 #the least common bit from each position is used. 
 #len(lines) = 1000
