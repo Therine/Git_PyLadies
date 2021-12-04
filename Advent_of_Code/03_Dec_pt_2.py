@@ -23,23 +23,34 @@ ogr_list2 = []  #This is where I'm going to put my first set after the line[0] b
 #Append the original element from lines if the first bit is most common to the ogr_list
 #Use the ogr_list for all subsequent bit evaluations
 #I need a function that takes the 1000 elements and creates the sublist of elements that coorespond to the most common bit
-def MCVariable(eval_list,idx):
-    for i in range(0,len(eval_list)):
-        if eval_list[i][idx] == 1:
-            ogr_list.append(eval_list[i])
-        if eval_list[i][idx] == 0:
-            ogr_list2.append(eval_list[i])
-    if len(ogr_list) >= 500:
-        complete_ogr.append(ogr_list)
-    else:
-        complete_ogr.append(ogr_list2)
-    return complete_ogr
-MCVariable(lines,0)
-for idx in range(0,12):
-    MCVariable(complete_ogr,idx)
+#def MCVariable(eval_list,idx):
+#    for i in range(0,len(eval_list)):
+#        if eval_list[i][idx] == 1:
+#            ogr_list.append(eval_list[i])
+#        if eval_list[i][idx] == 0:
+#            ogr_list2.append(eval_list[i])
+#    if len(ogr_list) >= (len(eval_list)/2):
+#        complete_ogr.append(ogr_list)
+#    else:
+#        complete_ogr.append(ogr_list2)
+#    return complete_ogr
+#MCVariable(lines,0)
+#for idx in range(0,11):
+  #  MCVariable(complete_ogr,idx)
+
+for i in range(0,len(lines)):
+    if lines[i][0] == 1:
+        ogr_list.append(lines[i])
+    if lines[i][0] == 0:
+        ogr_list2.append(lines[i])
+if len(ogr_list) >= (len(lines)/2):
+    complete_ogr.append(ogr_list)
+else:
+    complete_ogr.append(ogr_list2)
 
 
-
+print(lines[0][0])
 print(len(ogr_list))
+print(len(ogr_list2))
 print(ogr_list)
 print(complete_ogr)
