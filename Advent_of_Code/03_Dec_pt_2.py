@@ -22,32 +22,33 @@ ogr_list2 = []  #This is where I'm going to put my first set after the line[0] b
 #Evaluate which is the most common bit (1 or 0) in lines[0] 
 #Append the original element from lines if the first bit is most common to the ogr_list
 #Use the ogr_list for all subsequent bit evaluations
-#I need a function that takes the 1000 elements and creates the sublist of elements that coorespond to the most common bit
-#def MCVariable(eval_list,idx):
-#    for i in range(0,len(eval_list)):
-#        if eval_list[i][idx] == 1:
-#            ogr_list.append(eval_list[i])
-#        if eval_list[i][idx] == 0:
-#            ogr_list2.append(eval_list[i])
-#    if len(ogr_list) >= (len(eval_list)/2):
-#        complete_ogr.append(ogr_list)
-#    else:
-#        complete_ogr.append(ogr_list2)
-#    return complete_ogr
-#MCVariable(lines,0)
-#for idx in range(0,11):
-  #  MCVariable(complete_ogr,idx)
+#I need a function that takes the 1000 elements and creates the sublist of elements 
+# that coorespond to the most common bit
+def MCBit(eval_list,idx):
+    bit_position = [] #This is how I'm going to examine the bit in each position 0-11. Take the sum
+    # of this list and because it is binary, you can calculate the most common by whether the sum is more than 500
+    for i in range(0,len(eval_list)):
+        bit = eval_list[i][idx]
+        bit_position.append(bit)   
 
-for i in range(0,len(lines)):
-    if lines[i][0] == 1:
-        ogr_list.append(lines[i])
-    if lines[i][0] == 0:
-        ogr_list2.append(lines[i])
-if len(ogr_list) >= (len(lines)/2):
-    complete_ogr.append(ogr_list)
-else:
-    complete_ogr.append(ogr_list2)
-
+    #len(lines) = 1000
+    #len(lines[0]) = 12
+    for j in range(0,len(bit_position)):
+        bit_position[j] = int(bit_position[j])
+    if sum(bit_position) >= 500:
+    #it needs to got through and evaluate each element of lines 
+    # in order to populate the ogr_list properly
+        most_frequent_bit = '1'
+        for k in range (0,len(eval_list)):
+            if eval_list[k][idx] == most_frequent_bit:
+                ogr_list.append(eval_list[k])
+            
+    bit_position = []
+    return ogr_list
+#for m in range(0,12):
+MCBit(lines,0)   
+#for p in range(1,len(ogr_list)):
+#    MCBit(ogr_list,p)
 
 print(lines[0][0])
 print(len(ogr_list))
