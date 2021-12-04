@@ -9,8 +9,9 @@ with open ("input_03_dec.txt") as f:
 #print(len(lines))
 #print(len(lines[0]))
 
-
-ogr_list = [] #This is where I'm going to put my first set after the line[0] bits are evaluated. 
+complete_ogr = []
+ogr_list = []
+ogr_list2 = []  #This is where I'm going to put my first set after the line[0] bits are evaluated. 
 #And then use this to put the next set for ogr_list[1]
 
 
@@ -22,27 +23,23 @@ ogr_list = [] #This is where I'm going to put my first set after the line[0] bit
 #Append the original element from lines if the first bit is most common to the ogr_list
 #Use the ogr_list for all subsequent bit evaluations
 #I need a function that takes the 1000 elements and creates the sublist of elements that coorespond to the most common bit
-for m in range(0,12):
-    bit_position = [] #This is how I'm going to examine the bit in each position 0-11. Take the sum
-    # of this list and because it is binary, you can calculate the most common by whether the sum is more than 500
-    for i in range(0,len(lines)):
-        bit = lines[i][m]
-        bit_position.append(bit)   
+def MCVariable(eval_list,idx):
+    for i in range(0,len(eval_list)):
+        if eval_list[i][idx] == 1:
+            ogr_list.append(eval_list[i])
+        if eval_list[i][idx] == 0:
+            ogr_list2.append(eval_list[i])
+    if len(ogr_list) >= 500:
+        complete_ogr.append(ogr_list)
+    else:
+        complete_ogr.append(ogr_list2)
+    return complete_ogr
+MCVariable(lines,0)
+for idx in range(0,12):
+    MCVariable(complete_ogr,idx)
 
-    #len(lines) = 1000
-    #len(lines[0]) = 12
-    for j in range(0,len(bit_position)):
-        bit_position[j] = int(bit_position[j])
-    print (sum(bit_position))
-    if sum(bit_position) >= 500:
-    #it needs to got through and evaluate each element of lines 
-    # in order to populate the ogr_list properly
-        most_frequent_bit = '1'
-        for k in range (0,len(lines)):
-            if lines[k][m] == most_frequent_bit:
-                ogr_list.append(lines[k])
-            
-    bit_position = []
+
 
 print(len(ogr_list))
 print(ogr_list)
+print(complete_ogr)
