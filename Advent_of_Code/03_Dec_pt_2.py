@@ -63,22 +63,26 @@ def LCBit(eval_list,idx):
     for r in range(0,len(eval_list)):
         if eval_list[r][idx] == '1':
             co2_list1.append(eval_list[r])
-            
+            print(co2_list1)
         if eval_list[r][idx] == '0':
             co2_list0.append(eval_list[r])
+            print(co2_list0)
             
-    print(len(co2_list1), '<= the elements with the 1')
-    print(len(co2_list0), '<= the elements with the 0')
+    #print(len(co2_list1), '<= the elements with the 1')
+    #print(len(co2_list0), '<= the elements with the 0')
     #len(lines) = 1000
     #len(lines[0]) = 12
     
-    if len(co2_list1) < (len(complete_co2))/2:
-    #it needs to got through and evaluate each element of lines 
-    # in order to populate the co2_list properly
-        co2_list.append(co2_list1)
-    if len(co2_list0) < (len(complete_co2))/2:
-        co2_list.append(co2_list0)
-    
+        if len(co2_list1) < len(co2_list0):
+        #it needs to got through and evaluate each element of lines 
+        # in order to populate the co2_list properly
+            co2_list.append(co2_list1)
+        if len(co2_list0) < len(co2_list1):
+            co2_list.append(co2_list0)
+        if len(co2_list0) == len(co2_list1):
+            co2_list.append(co2_list0)
+    co2_list1 = []
+    co2_list0 = []
     return co2_list 
     
 #for m in range(0,12):
