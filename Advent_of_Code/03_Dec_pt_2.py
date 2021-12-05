@@ -58,15 +58,16 @@ def LCBit(eval_list,idx):
     co2_list = []
     co2_list1 = []
     co2_list0 = []
+    print(len(eval_list), '<=end of range in ', idx, 'for loop') #apparently 1000 ever time?
     #bit_position = [] #This is how I'm going to examine the bit in each position 0-11. Take the sum
     # of this list and because it is binary, you can calculate the most common by whether the sum is more than 500
     for r in range(0,len(eval_list)):
         if eval_list[r][idx] == '1':
             co2_list1.append(eval_list[r])
-            print(co2_list1)
+            #print(co2_list1)
         if eval_list[r][idx] == '0':
             co2_list0.append(eval_list[r])
-            print(co2_list0)
+            #print(co2_list0)
             
     #print(len(co2_list1), '<= the elements with the 1')
     #print(len(co2_list0), '<= the elements with the 0')
@@ -93,11 +94,14 @@ complete_ogr = lines
 complete_co2 = lines
 for p in range(0,12):
     complete_ogr = MCBit(complete_ogr,p)
-    complete_co2 = LCBit(complete_co2,p)
-    print('ogr', len(complete_ogr))
-    print('co2', len(complete_co2))
-    print(len(complete_ogr)+len(complete_co2))
     
+    print('ogr', len(complete_ogr))
+    
+
+
+for s in range(0,12):
+    complete_co2 = LCBit(complete_co2,s)
+    print('co2', len(complete_co2))
 
 #print(lines[0][0])
 #print(len(ogr_list))
