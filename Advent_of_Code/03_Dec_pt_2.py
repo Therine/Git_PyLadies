@@ -26,17 +26,15 @@ ogr_list2 = []  #This is where I'm going to put my first set after the line[0] b
 # that coorespond to the most common bit
 def MCBit(eval_list,idx):
     list1 = []
-    list0 =[]
-    ogr_list = []
-    #bit_position = [] #This is how I'm going to examine the bit in each position 0-11. Take the sum
-    # of this list and because it is binary, you can calculate the most common by whether the sum is more than 500
+    list0 = []
+    
     for i in range(0,len(eval_list)):
         if eval_list[i][idx] == '1':
             list1.append(eval_list[i])
         if eval_list[i][idx] == '0':
             list0.append(eval_list[i]) 
-    print(len(list1), '<= length of the ones that start with 1')
-    print(len(list0), '<= length of the ones that start with 0')
+    #print(len(list1), '<= length of the ones that start with 1')
+    #print(len(list0), '<= length of the ones that start with 0')
     if len(list1) >= len(list0):
         return list1
     if len(list1) < len(list0):
@@ -47,14 +45,31 @@ def MCBit(eval_list,idx):
     
     #it needs to got through and evaluate each element of lines 
     # in order to populate the ogr_list properly
+def LCBit(eval_list,idx):
+    list1 = []
+    list0 = []
     
-MCBit(lines,0)
+    for i in range(0,len(eval_list)):
+        if eval_list[i][idx] == '1':
+            list1.append(eval_list[i])
+        if eval_list[i][idx] == '0':
+            list0.append(eval_list[i]) 
+    #print(len(list1), '<= length of the ones that start with 1')
+    #print(len(list0), '<= length of the ones that start with 0')
+    if len(list1) == 0:
+        return list0
+    if len(list0) == 0:
+        return list1
+    if len(list1) >= len(list0):
+        return list0
+    if len(list1) < len(list0):
+        return list1
   
 complete_ogr = lines
-#complete_co2 = lines
+complete_co2 = lines
 for p in range(0,12):        
     complete_ogr = MCBit(complete_ogr,p)
-#    complete_co2 = MCBit(complete_co2,p)
+    complete_co2 = LCBit(complete_co2,p)
     #print('ogr', len(complete_ogr))
 
 
@@ -63,7 +78,7 @@ for p in range(0,12):
 
 #print(ogr_list)
 print(complete_ogr)
-#print(complete_co2)
+print(complete_co2)
 ogr_rating = ''.join(map(str,complete_ogr))
 int(ogr_rating)
 binary_string_ogr = ogr_rating
@@ -74,15 +89,15 @@ try:
 except ValueError:
     print("Invalid binary number")
 
-#co2_rating = ''.join(map(str,complete_co2))
-#int(co2_rating)
-#binary_string_co2 = co2_rating
+co2_rating = ''.join(map(str,complete_co2))
+int(co2_rating)
+binary_string_co2 = co2_rating
 
-#try:
-#    co2_rating_decimal = int(binary_string_co2,2)    
+try:
+    co2_rating_decimal = int(binary_string_co2,2)    
 
-#except ValueError:
-#    print("Invalid binary number")
+except ValueError:
+    print("Invalid binary number")
 print(ogr_rating_decimal)
-#print(co2_rating_decimal)
-#print(ogr_rating_decimal * co2_rating_decimal)
+print(co2_rating_decimal)
+print(ogr_rating_decimal * co2_rating_decimal)
