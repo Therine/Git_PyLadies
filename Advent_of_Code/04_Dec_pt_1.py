@@ -1,14 +1,11 @@
 with open ("input_04-dec.txt") as f:
-    #lines = f.read().splitlines()
-    lines = f.read().split()
+    lines = f.read().splitlines()
 #change the strings into integers
 #for i in range(0, len(lines)):
 #    lines[i] = int(lines[i])
-print(lines)
-
-#print(lines[0])
-drawn_numbers = lines[0].split(',')
-cards = lines[1]
+#print(lines)
+#drawn_numbers = lines[0].split(',')
+cards = str(lines[1:2501])
 print(cards)
 #space = rows[0].split(' ')
 #make a matrix out of the cards variable with nested lists. Rows will be the inner list and cards with be the next list and all the cards is lines[1:2501]
@@ -26,3 +23,4 @@ print(cards)
 #        i.append('x')
 
 #print(boards)
+#https://www.geeksforgeeks.org/python-search-elements-in-a-matrix/
