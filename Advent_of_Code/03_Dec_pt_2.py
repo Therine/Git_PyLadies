@@ -56,31 +56,29 @@ def MCBit(eval_list,idx):
 
 def LCBit(eval_list,idx):
     co2_list = []
-    bit_position = [] #This is how I'm going to examine the bit in each position 0-11. Take the sum
+    co2_list1 = []
+    co2_list0 = []
+    #bit_position = [] #This is how I'm going to examine the bit in each position 0-11. Take the sum
     # of this list and because it is binary, you can calculate the most common by whether the sum is more than 500
-    for i in range(0,len(eval_list)):
-        bit = eval_list[i][idx]
-        bit_position.append(bit)   
-
+    for r in range(0,len(eval_list)):
+        if eval_list[r][idx] == '1':
+            co2_list1.append(eval_list[r])
+            
+        if eval_list[r][idx] == '0':
+            co2_list0.append(eval_list[r])
+            
+    print(len(co2_list1), '<= the elements with the 1')
+    print(len(co2_list0), '<= the elements with the 0')
     #len(lines) = 1000
     #len(lines[0]) = 12
-    for j in range(0,len(bit_position)):
-        bit_position[j] = int(bit_position[j])
-    if sum(bit_position) < (len(complete_co2))/2:
+    
+    if len(co2_list1) < (len(complete_co2))/2:
     #it needs to got through and evaluate each element of lines 
-    # in order to populate the ogr_list properly
-        #print(sum(bit_position))
-        least_frequent_bit = '1'
-        for k in range (0,len(eval_list)):
-            if eval_list[k][idx] == least_frequent_bit:
-                co2_list.append(eval_list[k])
-    if sum(bit_position) >= (len(complete_co2))/2:
-        #print(sum(bit_position))
-        least_frequent_bit = '0'
-        for q in range (0,len(eval_list)):
-            if eval_list[q][idx] == least_frequent_bit:
-                co2_list.append(eval_list[q])  
-    bit_position = []
+    # in order to populate the co2_list properly
+        co2_list.append(co2_list1)
+    if len(co2_list0) < (len(complete_co2))/2:
+        co2_list.append(co2_list0)
+    
     return co2_list 
     
 #for m in range(0,12):
