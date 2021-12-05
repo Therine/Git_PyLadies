@@ -40,7 +40,7 @@ def MCBit(eval_list,idx):
     if sum(bit_position) >= (len(complete_ogr))/2:
     #it needs to got through and evaluate each element of lines 
     # in order to populate the ogr_list properly
-        #print(sum(bit_position))
+        print(sum(bit_position))
         most_frequent_bit = '1'
         least_frequent_bit = '0'
         for k in range (0,len(eval_list)):
@@ -50,7 +50,7 @@ def MCBit(eval_list,idx):
             if eval_list[bit][idx] == least_frequent_bit:
                 co2_list.append(eval_list[bit])
     if sum(bit_position) < (len(complete_ogr))/2:
-        #print(sum(bit_position))
+        print(sum(bit_position))
         most_frequent_bit = '0'
         least_frequent_bit = '1'
         for q in range (0,len(eval_list)):
@@ -59,59 +59,19 @@ def MCBit(eval_list,idx):
         for t in range (0,len(eval_list)):
             if eval_list[t][idx] == least_frequent_bit:
                 co2_list.append(eval_list[t])
-          
+                
     bit_position = []
     return ogr_list
     return co2_list
 
-def LCBit(eval_list,idx):
-    co2_list = []
-    co2_list1 = []
-    co2_list0 = []
-    print(len(eval_list), '<=end of range in ', idx, 'for loop') #apparently 1000 ever time?
-    #bit_position = [] #This is how I'm going to examine the bit in each position 0-11. Take the sum
-    # of this list and because it is binary, you can calculate the most common by whether the sum is more than 500
-    for r in range(0,len(eval_list)):
-        if eval_list[r][idx] == '1':
-            co2_list1.append(eval_list[r])
-            #print(co2_list1)
-        if eval_list[r][idx] == '0':
-            co2_list0.append(eval_list[r])
-            #print(co2_list0)
-            
-    print(len(co2_list1), '<= the elements with the 1')
-    print(len(co2_list0), '<= the elements with the 0')
-    #len(lines) = 1000
-    #len(lines[0]) = 12
-
-    if len(co2_list1) < len(co2_list0):
-    #it needs to got through and evaluate each element of lines 
-    # in order to populate the co2_list properly
-        co2_list.append(co2_list1)
-    if len(co2_list0) < len(co2_list1):
-        co2_list.append(co2_list0)
-    if len(co2_list0) == len(co2_list1):
-        co2_list.append(co2_list0)
-    co2_list1 = []
-    co2_list0 = []
-    return co2_list 
-    
-#for m in range(0,12):
-#print(len(MCBit(lines,0)))
-#MCBit(ogr_list,1)
-#print(len(ogr_list))   
+  
 complete_ogr = lines
 complete_co2 = lines
 for p in range(0,12):        
     complete_ogr = MCBit(complete_ogr,p)
-    
+    complete_co2 = MCBit(complete_co2,p)
     #print('ogr', len(complete_ogr))
-    
 
-
-#for s in range(0,12):
-complete_co2 = LCBit(complete_co2,0)
-print('co2', len(complete_co2))
 
 #print(lines[0][0])
 #print(len(ogr_list))
