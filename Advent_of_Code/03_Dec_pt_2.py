@@ -79,3 +79,25 @@ for p in range(0,12):
 #print(ogr_list)
 print(complete_ogr)
 print(complete_co2)
+ogr_rating = ''.join(map(str,complete_ogr))
+int(ogr_rating)
+binary_string_ogr = ogr_rating
+
+try:
+    ogr_rating_decimal = int(binary_string_ogr,2)    
+
+except ValueError:
+    print("Invalid binary number")
+
+co2_rating = ''.join(map(str,complete_co2))
+int(co2_rating)
+binary_string_co2 = co2_rating
+
+try:
+    co2_rating_decimal = int(binary_string_co2,2)    
+
+except ValueError:
+    print("Invalid binary number")
+print(ogr_rating_decimal)
+print(co2_rating_decimal)
+print(ogr_rating_decimal * co2_rating_decimal)
