@@ -7,10 +7,3 @@ def draw_map():
 
 draw_map()
 
-for x in range(10):
-    for y in range(10):
-        print('.', end=" ")
-        if (x,y) in [(0,0),]:
-            print('x', end=" ")
-        else:
-            print('.', end=" ")
