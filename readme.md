@@ -5,17 +5,18 @@ Let's turn the sound up; I think it's time for a Homework Roundup!
 - [ ] Lesson 1 
     - Homework
 - [ ] Lesson 2 
-    - Homework
+    - [Homework](https://colab.research.google.com/drive/1yrFvHL7YPkbild3ow5MtNcrXDJX4Iioz?usp=sharing): This was turned in and feedback given.
 - [ ] Lesson 3
-    - Homework
+    - [Homework](https://colab.research.google.com/drive/1YBjfx0HMI55KSrSMJqMunVTJ35tVZ7CN) Turned in and feedback given
 - [ ] Lesson 4
-    - Homework
+    - [Homework](https://colab.research.google.com/drive/1i6N3-J3ZlWg6UZfNzAPZ54RH9zT0dFbu) Turned in and feedback given
 - [ ] Lesson 5
     - Project 1 1-dimensional Tic-Tac-Toe
 - [ ] Lesson 6
     - No Homework assigned
 - [ ] Lesson 7
-    - Homework
+    - Homework 
+        - Not even started!! 
 - [ ] Lesson 8
     - Homework
 - [ ] Lesson 9-12
