@@ -4,6 +4,7 @@ Let's turn the sound up; I think it's time for a Homework Roundup!
 
 - [ ] Lesson 1 
     - Homework
+        - I wrote in my notes that I finished this, but I don't know where I did this work or whether I actually sent it in to them!
 - [x] Lesson 2 
     - [Homework](https://colab.research.google.com/drive/1yrFvHL7YPkbild3ow5MtNcrXDJX4Iioz?usp=sharing): This was turned in and feedback given.
 - [x] Lesson 3
@@ -15,10 +16,10 @@ Let's turn the sound up; I think it's time for a Homework Roundup!
 - [ ] Lesson 6
     - No Homework assigned
 - [ ] Lesson 7
-    - Homework 
+    - [Homework](https://github.com/Therine/Git_PyLadies/blob/main/07/Homework-Lesson-7.py) 
         - Not even started!! 
 - [ ] Lesson 8
-    - Homework
+    - [Homework](https://github.com/Therine/Git_PyLadies/blob/main/08/Homework-Lesson-8.py)
 - [ ] Lesson 9-12
     - No Homework assigned
 - [ ] Lesson 13
