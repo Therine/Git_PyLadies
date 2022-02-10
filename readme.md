@@ -4,14 +4,14 @@ Let's turn the sound up; I think it's time for a Homework Roundup!
 
 - [ ] Lesson 1 
     - Homework
-- [ ] Lesson 2 
+- [x] Lesson 2 
     - [Homework](https://colab.research.google.com/drive/1yrFvHL7YPkbild3ow5MtNcrXDJX4Iioz?usp=sharing): This was turned in and feedback given.
-- [ ] Lesson 3
+- [x] Lesson 3
     - [Homework](https://colab.research.google.com/drive/1YBjfx0HMI55KSrSMJqMunVTJ35tVZ7CN) Turned in and feedback given
-- [ ] Lesson 4
+- [x] Lesson 4
     - [Homework](https://colab.research.google.com/drive/1i6N3-J3ZlWg6UZfNzAPZ54RH9zT0dFbu) Turned in and feedback given
 - [ ] Lesson 5
-    - Project 1 1-dimensional Tic-Tac-Toe
+    - [Project 1 1-dimensional Tic-Tac-Toe](https://github.com/Therine/Git_PyLadies/blob/main/1Dtictactoe-AJ-KD.py)
 - [ ] Lesson 6
     - No Homework assigned
 - [ ] Lesson 7
@@ -22,4 +22,4 @@ Let's turn the sound up; I think it's time for a Homework Roundup!
 - [ ] Lesson 9-12
     - No Homework assigned
 - [ ] Lesson 13
-    - Final Project - Snake Game
+    - [Final Project - Snake Game](https://github.com/Therine/Git_PyLadies/tree/main/Snake)
