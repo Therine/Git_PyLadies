@@ -1,15 +1,16 @@
 from random import randrange
+player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an X or O? ")
 
-def assign_mark(player_mark)
-  player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an X or O? ")
+def assign_mark(player_mark)  
   if player_mark == "X" or "x":
     pc_mark = "o"
     player_mark = "x"
   elif player_mark == "0" or "o" or "O":
     pc_mark = "x"
     player_mark = "o"
-  print("Perfect, you can be ", player_mark, " and the computer will be ", pc_mark)
-
+  return pc_mark
+  return player_mark
+print(assign_mark)
 
 #Step 1
 #Write a function evaluate that gets the string with the board of 1D tic-tac-toe, and returns one character based on the state of the game:
