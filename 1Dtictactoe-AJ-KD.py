@@ -1,5 +1,5 @@
 from random import randrange
-player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an X or O? ")
+player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an x or o? ")
 
 def assign_mark(player_mark):  
   if player_mark == "X" or "x":
@@ -8,15 +8,16 @@ def assign_mark(player_mark):
   elif player_mark == "0" or "o" or "O":
     assign_mark.pc_mark = "x"
     assign_mark.player_mark = "o"
-  return assign_mark.pc_mark, assign_mark.player_mark
-print(assign_mark(player_mark))
+  return assign_mark.pc_mark
 
+board = '--------------------'
+print('Here is what our board looks like: \n', board)
 #Step 1
 #Write a function evaluate that gets the string with the board of 1D tic-tac-toe, and returns one character based on the state of the game:
 def evaluate(board):
-    if board == "%xxx%":
+    if board == "%'-','-','-',%":
         return "X"
-    elif board == "%ooo%":
+    elif board == "%'o','o','o'%":
         return "O"
     elif board != "-":
         return "!"
@@ -31,7 +32,6 @@ def evaluate(board):
 
 def move(board, mark, position):
     # Returns the game board with the given mark in the given position.
-    board = '-'*20 #this should be an official list like board = ['- '*20]?
     print ("Let's take a look at the board, shall we?")
     print(board)
     print("Right, that line of dashes is our board. As you play, the board should update \n with your marker and then the computer's marker until one of you get 3 in a row.")
@@ -51,7 +51,7 @@ def player_move(position):
       if position[i] == '-':
         break
       else:
-        position[player_mark]
+        mark = position[player_mark]
 
   else:
     print("Sorry, my friend, that position is already taken!")
