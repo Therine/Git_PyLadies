@@ -3,8 +3,14 @@ This repository was started during the PyLadies Vienna Fall 2021 Introduction to
 Let's turn the sound up; I think it's time for a Homework Roundup!
 
 - [ ] Lesson 1 
+<<<<<<< HEAD
     - [Homework](https://colab.research.google.com/drive/1TtekKrwzBYE7xd1uENfGOm9podef5BeH?usp=sharing)
         - Finished! Still need to turn in.
+=======
+    - Homework
+        - I wrote in my notes that I finished this, but I don't know where I did this work or whether I actually sent it in to them!
+        - It turns out I didn't manage to send it in, but it was short and sweet.
+>>>>>>> b0005ef8fd007e28ff77ebfa68ebe141cda98c8f
 - [x] Lesson 2 
     - [Homework](https://colab.research.google.com/drive/1yrFvHL7YPkbild3ow5MtNcrXDJX4Iioz?usp=sharing): This was turned in and feedback given.
 - [x] Lesson 3
@@ -20,6 +26,7 @@ Let's turn the sound up; I think it's time for a Homework Roundup!
         - Not even started!! 
 - [ ] Lesson 8
     - [Homework](https://github.com/Therine/Git_PyLadies/blob/main/08/Homework-Lesson-8.py)
+        - Still need to start this one too.
 - [ ] Lesson 9-12
     - No Homework assigned
 - [ ] Lesson 13
