@@ -1,6 +1,8 @@
 from random import randrange
 player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an x or o? ")
-
+# Trying to learn how use the variables pc_mark and player_mark outside of this assign_mark function.
+# https://www.kite.com/python/answers/how-to-access-a-variable-outside-of-a-function-in-python
+# 
 def assign_mark(player_mark):  
   if player_mark == "X" or "x":
     pc_mark = "o"
@@ -9,7 +11,7 @@ def assign_mark(player_mark):
     pc_mark = "x"
     player_mark = "o"
   return (pc_mark, player_mark)
-print(assign_mark[2])
+print(pc_mark)
 board = '--------------------'
 print('Here is what our board looks like: \n', board)
 position = input('Where would you like to place your marker? Pick a number between 0-19: ')
