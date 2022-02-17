@@ -2,7 +2,7 @@ This repository was started during the PyLadies Vienna Fall 2021 Introduction to
 
 Let's turn the sound up; I think it's time for a Homework Roundup!
 
-- [ ] Lesson 1 
+- [x] Lesson 1 
     - [Homework](https://colab.research.google.com/drive/1TtekKrwzBYE7xd1uENfGOm9podef5BeH?usp=sharing)
         - Finished! Still need to turn in.
 - [x] Lesson 2 
