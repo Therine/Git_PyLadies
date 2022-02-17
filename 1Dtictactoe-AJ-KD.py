@@ -23,10 +23,6 @@ def evaluate(board):
         return "X"
     elif board == "%ooo%":
         return "O"
-    elif board == "%000%":
-        return "O" 
-    elif board == "%OOO%":
-        return "O" 
     elif board != "-":
         return "!"
     else:
