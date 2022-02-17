@@ -1,17 +1,17 @@
 from random import randrange
-player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an x or o? ")
+player_mark_input = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our case, \n let's just call it tic, because we are only playing in one dimension. \n Anyway, would you like to be an x or o? ")
 # Trying to learn how use the variables pc_mark and player_mark outside of this assign_mark function.
 # https://www.kite.com/python/answers/how-to-access-a-variable-outside-of-a-function-in-python
 # 
-def assign_mark(player_mark):  
-  if player_mark == "X" or "x":
+def assign_mark(player_mark_input):  
+  if player_mark_input == "X" or "x":
     pc_mark = "o"
     player_mark = "x"
-  elif player_mark == "0" or "o" or "O":
+  elif player_mark_input == "0" or "o" or "O":
     pc_mark = "x"
     player_mark = "o"
   return (pc_mark, player_mark)
-print("Great, you'll be", assign_mark(player_mark)[1], "and I'll be", assign_mark(player_mark)[0])
+print("Great, you'll be", assign_mark(player_mark_input)[1], "and I'll be", assign_mark(player_mark_input)[0])
 
 board = '--------------------'
 print('Here is what our board looks like: \n', board)
