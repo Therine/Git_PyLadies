@@ -11,7 +11,8 @@ def assign_mark(player_mark):
     pc_mark = "x"
     player_mark = "o"
   return (pc_mark, player_mark)
-print(pc_mark)
+print("Great, you'll be", assign_mark(player_mark)[1], "and I'll be", assign_mark(player_mark)[0])
+
 board = '--------------------'
 print('Here is what our board looks like: \n', board)
 position = input('Where would you like to place your marker? Pick a number between 0-19: ')
