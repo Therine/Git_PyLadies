@@ -3,22 +3,27 @@ player_mark = input("Hi! Let's play a nice game of tic-tac-toe. Or maybe in our 
 
 def assign_mark(player_mark):  
   if player_mark == "X" or "x":
-    assign_mark.pc_mark = "o"
-    assign_mark.player_mark = "x"
+    pc_mark = "o"
+    player_mark = "x"
   elif player_mark == "0" or "o" or "O":
-    assign_mark.pc_mark = "x"
-    assign_mark.player_mark = "o"
-  return assign_mark.pc_mark
-
+    pc_mark = "x"
+    player_mark = "o"
+  return (pc_mark, player_mark)
+print(assign_mark[2])
 board = '--------------------'
 print('Here is what our board looks like: \n', board)
+position = input('Where would you like to place your marker? Pick a number between 0-19: ')
 #Step 1
 #Write a function evaluate that gets the string with the board of 1D tic-tac-toe, and returns one character based on the state of the game:
 def evaluate(board):
-    if board == "%'-','-','-',%":
+    if board == "%xxx%":
         return "X"
-    elif board == "%'o','o','o'%":
+    elif board == "%ooo%":
         return "O"
+    elif board == "%000%":
+        return "O" 
+    elif board == "%OOO%":
+        return "O" 
     elif board != "-":
         return "!"
     else:
@@ -42,17 +47,11 @@ def move(board, mark, position):
 #Step 3
 #Write a player_move function that gets a string with the game board, asks the player which position he wants to play, and returns the updated game board with the player's move. The function should reject negative or too large numbers or moves to an occupied position. If the user has entered a wrong argument, the function should ask again (to get correct answer).
 #this function needs work. 
-def player_move(position):
-  position = int(input("Where you would like to place your piece (0-19)? "))
-  chosen_position = position[position]
+def player_move(board, position):
+  chosen_position = board[position]
   if chosen_position == '-':
     # somehow replace this dash with the player_marker. I think that this is going to involve a for loop
-    for i in range (19):
-      if position[i] == '-':
-        break
-      else:
-        mark = position[player_mark]
-
+    print("replace this with code that removes the dash, and places the player_mark variable")
   else:
     print("Sorry, my friend, that position is already taken!")
   print(board)
