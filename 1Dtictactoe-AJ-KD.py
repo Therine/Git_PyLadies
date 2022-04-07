@@ -12,18 +12,19 @@ def assign_mark(player_mark_input):
     player_mark = "o"
   return (pc_mark, player_mark)
 print("Great, you'll be", assign_mark(player_mark_input)[1], "and I'll be", assign_mark(player_mark_input)[0])
-
+goes_first = input("So, which one of you should go first, you or the computer. Type in 'me' or 'pc': ")
 board = '--------------------'
-print('Here is what our board looks like: \n', board)
-position = input('Where would you like to place your marker? Pick a number between 0-19: ')
+#print('Here is what our board looks like: \n', board)
+#position = input('Where would you like to place your marker? Pick a number between 0-19: ')
 #Step 1
 #Write a function evaluate that gets the string with the board of 1D tic-tac-toe, and returns one character based on the state of the game:
 def evaluate(board):
+    print(board)
     if board == "%xxx%":
         return "X"
     elif board == "%ooo%":
         return "O"
-    elif board != "-":
+    elif board != "%-%":
         return "!"
     else:
         return "-"  
@@ -37,9 +38,10 @@ def evaluate(board):
 def move(board, mark, position):
     # Returns the game board with the given mark in the given position.
     print ("Let's take a look at the board, shall we?")
-    print(board)
+    evaluate(board)
+    if 
     print("Right, that line of dashes is our board. As you play, the board should update \n with your marker and then the computer's marker until one of you get 3 in a row.")
-    goes_first = input("So, which one of you should go first, you or the computer. Type in 'me' or 'pc': ")
+    
     if goes_first == "me":
         player_move(position = int(input("Where you would like to place your piece (0-19)? ")))
 
