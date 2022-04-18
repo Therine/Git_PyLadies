@@ -33,13 +33,12 @@ print("Great, you'll be", assign_mark(player_mark_input)[1], "and I'll be", assi
 goes_first = input("So, which one of you should go first, you or the computer. Type in 'me' or 'pc': ")
 if goes_first == 'me':
     position = int(input("Pick a number between 0 and 19: "))
-    for element in board: 
-        if element == "-":  
-          temp = list(board)
-          temp[position] = assign_mark(player_mark_input)[1]
-          board = "".join(temp)
-        else:
-          print("There is already a mark at that spot.")
+    if board[position] == "-":  
+      temp = list(board)
+      temp[position] = assign_mark(player_mark_input)[1]
+      board = "".join(temp)
+    else:
+      print("There is already a mark at that spot.")
       
 print(board)
 
