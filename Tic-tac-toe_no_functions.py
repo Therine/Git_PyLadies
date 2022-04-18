@@ -14,7 +14,7 @@
 # 14. If the position is a mark, display that the position is already filled and the player needs to pick a new position number. 
 # 15. After each mark is added, check to see if the board has any xxx or ooo in the string.
 # 16. Once there is an xxx or an ooo, announce that the player with that mark won and ask if they want to play again. Restart at the beginning if yes and exit game if not.
-from random import randrange
+from random import randrange, randint
 board = "--------------------"
 play_again = True
 print("Let's play a nice game of tic-tac-toe,\nerr maybe it is really just tic?\nThere is only one dimension of 20 positions, and it looks like this\n", board )
@@ -41,9 +41,20 @@ def assign_mark(player_mark_input):
     player_mark = "o"
   return (pc_mark, player_mark)
 print("Great, you'll be", assign_mark(player_mark_input)[1], "and I'll be", assign_mark(player_mark_input)[0])
-goes_first = input("So, which one of you should go first, you or the computer. Type in 'me' or 'pc': ")
+#goes_first = input("So, which one of you should go first, you or the computer. Type in 'me' or 'pc': ")
+print("Let's flip a coin to see who goes first. Heads, you; Tails, me")
+turn = randint(1,2)
+if turn == 1:
+  player_turn = True
+  computer_turn = False
+  print("\nOh, it's heads! You will go first.")
+else:
+  player_turn = False
+  computer_turn = True
+  print("\nTails! I get to go first.")
+
 while play_again:
-  if goes_first == 'me':
+  if player_turn:
         position = int(input("Pick a number between 0 and 19: "))
         if board[position] == "-":  
           temp = list(board)
@@ -54,14 +65,20 @@ while play_again:
           print("There is already a mark at that spot.")
   else:
         position = randrange(0,19,1)
+        print(position)
         if board[position] == "-":  
           temp = list(board)
-          temp[position] = assign_mark(player_mark_input)[1]
+          temp[position] = assign_mark(player_mark_input)[0]
           board = "".join(temp)
         else:
           print("There is already a mark at that spot.")
+  
   print(board)
-  play_again = input("Do you want to keep playing? Type True or False: ")
+  player_turn = not player_turn
+  computer_turn = not computer_turn
+  #play_again = input("Do you want to keep playing? Type True or False: ")
+  
+
 
 
 
