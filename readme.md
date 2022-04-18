@@ -13,7 +13,7 @@ Let's turn the sound up; I think it's time for a Homework Roundup!
     - [Homework](https://colab.research.google.com/drive/1i6N3-J3ZlWg6UZfNzAPZ54RH9zT0dFbu) Turned in and feedback given
 - [ ] Lesson 5
     - [Project 1 1-dimensional Tic-Tac-Toe (this one kinda works!!)](https://github.com/Therine/Git_PyLadies/blob/main/Tic-tac-toe_no_functions.py)
-    ~~ - [Project 1 1-dimensional Tic-Tac-Toe (the original one I started)](https://github.com/Therine/Git_PyLadies/blob/main/1Dtictactoe-AJ-KD.py)~~
+    - ~~[Project 1 1-dimensional Tic-Tac-Toe (the original one I started)](https://github.com/Therine/Git_PyLadies/blob/main/1Dtictactoe-AJ-KD.py)~~
         - I'm abandoning this file because I wanted to just start without focusing on functions, just working on getting the code to actually work.
 - [ ] Lesson 6
     - No Homework assigned
